@@ -1,10 +1,10 @@
 /**
  * Portfolio component
  *
- * Highlights some of  your creations. These can be designs, websites,
- * open source contributions, articles you've written and more.
+ * Highlights some of your creations. These can be designs, websites,
+ * open-source contributions, articles you've written, and more.
  *
- * This is a great area for you to to continually add to and refine
+ * This is a great area for you to continually add to and refine
  * as you continue to learn and create.
  */
 
@@ -14,45 +14,81 @@ import React from "react";
  * Desk image
  *
  * Below is a sample desk image. Feel free to update this to an image of your choice,
- * updating below imageAltText to string that represents what you see in that image.
+ * updating below imageAltText to a string that represents what you see in that image.
  *
  * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
+ * can freely use on your site.
  */
-import image from "../images/design-desk.jpeg";
+import image from "../images/camel-8620974_1280.png";
 
-const imageAltText = "desktop with books and laptop";
+const imageAltText = "camel";
 
 /**
  * Project list
  *
- * An array of objects that will be used to display for your project
- * links section. Below is a sample, update to reflect links you'd like to highlight.
+ * An array of objects that will be used to display your project links section.
+ * Below is your list of projects.
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "CSS Button Hover Effect",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "Created a CSS button hover effect for enhanced user experience.",
   },
   {
-    title: "Web Development for Beginners",
+    title: "The Hunted (Unity)",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Developed a 3D Hide and Seek Game for submission to the MIT Blueprint 2020 Hackathon. Utilized AI in Unity using C# for game mechanics.",
   },
   {
-    title: "My Resume Site",
+    title: "Generating Novel Rhythms with ML",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "Implemented machine learning algorithms to generate novel rhythms through interpolation. Applied ML techniques to create new rhythmic patterns.",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Predicting Visitor Purchases (with BigQuery ML & GCP)",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "Utilized Google Cloud Platform's BigQuery ML to analyze an extensive ecommerce dataset. Extracted insights into customer purchasing behavior and made data-driven decisions for business enhancement.",
+  },
+  {
+    title: "Cloud Classifying Weather Predictor",
+    description:
+      "Developed an ML application to identify cloud types from images using Google Cloud Platform's Vision API and AutoML Vision. Implemented multi-label cloud classification on a public cloud dataset for accurate predictions.",
+  },
+  {
+    title: "PizzaBot: Conversational Pizza Ordering System Bot",
+    description:
+      "Built a chatbot using GCP Dialogflow for a fictional pizza shop ordering system. Defined intents and identified entities for effective extraction of user queries.",
+  },
+  {
+    title: "Simple Car Customizer (Python)",
+    description:
+      "Developed a car customization application using Python, featuring various car picking functionalities.",
+  },
+  {
+    title: "The Orange Adventure (Unity)",
+    description:
+      "Created a 2D platformer game with an 8-bit format using Unity.",
+  },
+  {
+    title: "Simple Stocks Game",
+    description:
+      "Implemented a Java-based Simple Stocks Game to educate middle-school/high-school students about stock market volatility.",
+  },
+  {
+    title: "Leap Frog (Processing.js)",
+    description:
+      "Replicated a leapfrog game using the Processing.js language for educational purposes.",
+  },
+  {
+    title: "Online Price Tracker (Python)",
+    description:
+      "Implemented a Python web scraper using BeautifulSoup and other web services to track online prices.",
+  },
+  {
+    title: "WASD Game (FlowLab/GameSalad)",
+    description:
+      "Created and tested a simple WASD game using FlowLab/GameSalad for an interactive gaming experience.",
   },
 ];
 
@@ -69,11 +105,9 @@ const Portfolio = () => {
           />
         </div>
         <div className="container">
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
+          {projectList.map((project, index) => (
+            <div className="box" key={index}>
+              <h3>{project.title}</h3>
               <p className="small">{project.description}</p>
             </div>
           ))}
